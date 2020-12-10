@@ -40,7 +40,7 @@ pipeline {
         }
         stage('DeployToProduction') {
             when {
-                branch 'example-solution'
+                branch 'master'
             }
             steps {
                 input 'Does the staging environment look OK?'
