@@ -9,9 +9,9 @@ pipeline {
             }
         }
         stage('DeployToStaging') {
-            when {
+           /* when {
                 branch 'example-solution'
-            }
+            }*/
             steps {
                 withCredentials([usernamePassword(credentialsId: 'webserver-login', usernameVariable: 'USERNAME', passwordVariable: 'USERPASS')]) {
                     sshPublisher(
